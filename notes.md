@@ -31,6 +31,21 @@ fatify - framawork - Fastify es un framework web para Node.js que se centra en o
 -Fastify puede considerarse una alternativa moderna y eficiente a Express.js
 npm install fastify
 
+Prisma: Configurando extensão no VSCode
+Instale a extensão Prisma no seu Visual Studio Code.
+Abra a Paleta de Comandos:
+Se estiver no Windows ou Linux: CTRL + SHIFT + P
+Se estiver no macOS: CMD + SHIFT + P
+Abra as configurações em JSON buscando por: 
+Se o seu VSCode estiver em português: Abrir as Configurações do usuário (JSON)
+Se o seu VSCode estiver em inglês: Open User Settings (JSON)
+Adicione dentro do JSON o código abaixo:
+
+"[prisma]": {
+  "editor.defaultFormatter": "Prisma.prisma",
+  "editor.formatOnSave": true
+},
+
 
 Prisma: Prisma es un conjunto de herramientas de base de datos que simplifica y optimiza el trabajo con bases de datos en aplicaciones Node.js y TypeScript. Es un ORM (Object-Relational Mapping) moderno que permite interactuar con bases de datos de una manera más intuitiva y eficiente. Prisma proporciona una serie de características que lo hacen atractivo para desarrolladores que buscan una forma más productiva de manejar sus bases de datos.
 Instalación:
@@ -44,4 +59,31 @@ npx prisma init --datasource-provider SQLite
 
 banco de datos SQLLite, banco de datos- 
 
-npx prisma migrate dev   este comando compara os datos com o banco 
+npx prisma migrate dev   este comando compara os datos com o banco cria la carptea migration 
+
+extenciones del chromo para visualizar json
+JSON Viewer Pro
+
+
+creaar as rotas da aplicacion 
+
+
+validaciones :
+
+con zod https://zod.dev/?id=introduction
+Zod schemas - Zod es una biblioteca de TypeScript para declarar y validar esquemas de datos. 
+
+integracion nativa de fastify-zod 
+npm i fastify-type-provider-zod
+
+https://github.com/turkerdev/fastify-type-provider-zod-
+
+
+app.setValidatorCompiler(validatorCompiler);
+app.setSerializerCompiler(serializerCompiler);
+
+
+comando npx prisma studio- puede tener aceso interface para navegar por el banco de datos 
+
+
+npm i dayjs- biblioteca para datas en javascript 

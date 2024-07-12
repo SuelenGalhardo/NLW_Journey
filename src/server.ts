@@ -1,32 +1,17 @@
 import fastify from "fastify";
+import { createTrip } from "./routes/create-trip";
 
-import { prisma } from "./lib/prisma";
+import { serializerCompiler, validatorCompiler} from "fastify-type-provider-zod";
+
+//import { prisma } from "./lib/prisma";
 
 const app = fastify();
 
+app.setValidatorCompiler(validatorCompiler);
+app.setSerializerCompiler(serializerCompiler);
 
-app.get('/cadastrar', async () => {
+app.register(createTrip)
 
-    await prisma.trip.create({
-        
-   data: {
-        destination: 'Madrid',
-        starts_at: new Date(),
-        ends_at: new Date(),
-
-
-    },
-})
-
-return { message: 'Viagem cadastrada com sucesso!' }
-})
-
-
-app.get("/listar", async() => {
-    const trips = await prisma.trip.findMany();
-    return trips;
-    
-});
 
 app.listen({ port: 3333 }).then(() => {
     console.log("Server is running on port 3333")
