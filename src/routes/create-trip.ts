@@ -14,12 +14,7 @@ export async function createTrip(app: FastifyInstance) {
                destination: z.string().min(4),
                starts_at: z.coerce.date(),
                 ends_at:  z.coerce.date(),
-        })
-    
-
-               
-
-
+        })              
 
         },
     }, async(request) => {
@@ -40,10 +35,6 @@ export async function createTrip(app: FastifyInstance) {
                 ends_at,
             }
         })
-
-
-
-
 
        return {
        tripId: trip.id
