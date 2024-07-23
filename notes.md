@@ -87,3 +87,22 @@ comando npx prisma studio- puede tener aceso interface para navegar por el banco
 
 
 npm i dayjs- biblioteca para datas en javascript 
+
+
+para enviar el correo se utiliza la biblioteca nodemailer :
+
+https://nodemailer.com/
+
+npm install nodemailer - esta echa con javascript , hay qeue instalar para typeScript
+npm i --save-dev @types/nodemailer
+
+
+alternativas gratuitas para testar el envio de correo:
+
+mailtrap.io -- https://mailtrap.io/- crea un servidor fake... tiene plano gratuito 
+
+pero, nodemailes, tiene un servicio gratuito para verificar testar el envio de correo que es el 
+https://ethereal.email/
+
+
+
